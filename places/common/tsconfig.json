@@ -1,0 +1,25 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo",
+		"baseUrl": "./",
+		"rootDirs": ["src", "test"],
+		"paths": {
+			"common/*": ["src/*"],
+			"test/*": ["test/*"],
+			"types/*": ["src/types/*"]
+		},
+		"typeRoots": [
+			"../../node_modules/@rbxts",
+			"../../node_modules/@flamework",
+			"node_modules/@rbxts",
+			"node_modules/@flamework"
+		],
+		"outDir": "out"
+	},
+	"include": [
+		"src",
+		"test",
+		"../common/**/*"
+	]
+}

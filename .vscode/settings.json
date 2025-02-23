@@ -1,0 +1,108 @@
+{
+	// TypeScript Configuration
+	"typescript.tsdk": "node_modules/typescript/lib",
+
+	// File Endings and Package Manager
+	"files.eol": "\n",
+	"npm.packageManager": "pnpm",
+
+	// Auto fix & Organize Imports
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "never"
+	},
+
+	// File Explorer Settings
+	"explorer.fileNesting.patterns": {
+		"package.json": ".darklua.json, .gitattributes, .gitignore, .npmrc, asphalt.toml, flamework.build, pnpm-lock.yaml, rokit.toml, .env, testez-companion.toml",
+		"README.md": "LICENSE",
+		"asphalt.toml": "asphalt.lock.toml",
+		"eslint.config.ts": "commitlint.config.ts, cspell.config.yaml, renovate.json",
+		"default.project.json": "game.rbxl",
+		"*.rbxl": "*.rbxl.lock"
+	},
+
+	// File Exclusion
+	"files.exclude": {
+		"patches": true,
+		".husky": true,
+		".github": true,
+		".gitattributes": true,
+		"pnpm-lock.yaml": true,
+		"*/**/flamework.build": true,
+		"include": true,
+		"scripts": true
+	},
+
+	// Custom Labels for Index Files
+	"workbench.editor.customLabels.patterns": {
+		"**/index.*": "${dirname}.${extname}"
+	},
+
+	// ESLint Configuration
+	"eslint.run": "onType",
+	"eslint.format.enable": true,
+	"eslint.useFlatConfig": true,
+	"eslint.rules.customizations": [
+		{
+			"rule": "style/*",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "format/*",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*-indent",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*-spacing",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*-spaces",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*-order",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*-dangle",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*-newline",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*quotes",
+			"severity": "off",
+			"fixable": true
+		},
+		{
+			"rule": "*semi",
+			"severity": "off",
+			"fixable": true
+		}
+	],
+	"eslint.validate": [
+		"typescript",
+		"typescriptreact",
+		"markdown",
+		"json",
+		"jsonc",
+		"yaml",
+		"toml",
+		"luau"
+	]
+}

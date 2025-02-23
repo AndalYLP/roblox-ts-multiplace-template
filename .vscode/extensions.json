@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"streetsidesoftware.code-spell-checker",
+		"usernamehw.errorlens",
+		"dbaeumer.vscode-eslint",
+		"flamework.flamework-vscode",
+		"eamodio.gitlens",
+		"yoavbls.pretty-ts-errors",
+		"roblox-ts.vscode-roblox-ts",
+		"evaera.vscode-rojo",
+		"gruntfuggly.todo-tree",
+		"tacheometrist.testez-companion"
+	]
+}

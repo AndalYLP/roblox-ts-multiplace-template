@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"incremental": true,
+		"target": "ESNext",
+		"jsx": "react",
+		"jsxFactory": "React.createElement",
+		"jsxFragmentFactory": "React.Fragment",
+		"moduleDetection": "force",
+		"noLib": true,
+		"experimentalDecorators": true,
+
+		"baseUrl": ".",
+		"module": "commonjs",
+		"moduleResolution": "Node",
+
+		"resolveJsonModule": true,
+
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"downlevelIteration": true,
+
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"plugins": [
+			{
+				"transform": "rbxts-transformer-flamework"
+			},
+			{
+				"transform": "rbxts-transform-debug"
+			},
+			{
+				"transform": "rbxts-transform-env",
+				"shortCircuitNodeEnv": false,
+				"defaultEnvironment": "development"
+			}
+		]
+	}
+}

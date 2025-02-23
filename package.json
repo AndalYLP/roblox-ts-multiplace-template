@@ -1,0 +1,116 @@
+{
+	"name": "roblox-ts-multiplace-template",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [],
+	"license": "MIT",
+	"author": "AndalYLP",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"assets:syncback": "lune run syncback",
+		"assets:upload": "asphalt sync && eslint src/shared/assets.d.ts --fix",
+		"clean": "rimraf places/*/out || true && rimraf places/*/dist || true && rimraf places/*/flamework.build || true",
+		"darklua": "darklua process places/$PLACE/out places/$PLACE/dist --verbose",
+		"dev:build": "rbxts-build build",
+		"dev:compile": "rbxts-build compile",
+		"dev:open": "rbxts-build open",
+		"dev:restart": "pnpm dev:stop && pnpm dev:start",
+		"dev:start": "rbxts-build start",
+		"dev:stop": "rbxts-build stop",
+		"dev:sync": "rbxts-build sync && eslint places/*/src/services.d.ts --fix",
+		"dev:watch": "rbxts-build watch",
+		"lint": "eslint src",
+		"prepare": "node .husky/install.js && cp patches/jest-lua.rbxm node_modules/@rbxts/jest-vendor",
+		"prod:build": "dotenv -e .env -- bash -c 'pnpm clean && NODE_ENV=production && rbxtsc --verbose -i include -p places/$PLACE && pnpm darklua'",
+		"prod:sync": "dotenv -e .env -- bash -c 'rojo serve places/$PLACE/build.project.json'",
+		"testez:install": "cp patches/TestEZ_Companion.rbxm $LOCALAPPDATA/Roblox/Plugins"
+	},
+	"lint-staged": {
+		"*.{js,ts,tsx}": [
+			"eslint --fix"
+		]
+	},
+	"resolutions": {
+		"@rbxts/compiler-types": "3.0.0-types.0",
+		"minimist": "1.2.8"
+	},
+	"dependencies": {
+		"@flamework/components": "1.2.4",
+		"@flamework/core": "1.2.4",
+		"@flamework/networking": "1.2.4",
+		"@rbxts/abbreviate": "3.0.4",
+		"@rbxts/flamework-binary-serializer": "0.6.0",
+		"@rbxts/janitor": "1.17.0-ts.1",
+		"@rbxts/jest": "0.1.0",
+		"@rbxts/jest-globals": "0.1.0",
+		"@rbxts/lapis": "0.3.8",
+		"@rbxts/lapis-mockdatastore": "0.3.7",
+		"@rbxts/log": "0.6.3",
+		"@rbxts/make": "1.0.6",
+		"@rbxts/object-utils": "1.0.4",
+		"@rbxts/pretty-react-hooks": "0.6.2",
+		"@rbxts/promise-child": "1.2.1",
+		"@rbxts/rbx-debug": "1.0.2-ts.0",
+		"@rbxts/react": "17.2.3",
+		"@rbxts/react-reflex": "0.3.6",
+		"@rbxts/react-roblox": "17.2.3",
+		"@rbxts/reflex": "4.3.1",
+		"@rbxts/ripple": "0.9.3",
+		"@rbxts/services": "1.5.5",
+		"@rbxts/set-timeout": "1.1.2",
+		"@rbxts/sift": "0.0.9",
+		"@rbxts/signal": "1.1.1",
+		"@rbxts/string-utils": "1.0.3",
+		"@rbxts/t": "3.2.1",
+		"@rbxts/ui-labs": "2.3.8",
+		"@rbxts/validate-tree": "2.0.2",
+		"@rbxts/zone-plus": "3.2.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "19.7.1",
+		"@commitlint/config-conventional": "19.7.1",
+		"@commitlint/types": "19.5.0",
+		"@eslint-react/eslint-plugin": "1.26.2",
+		"@isentinel/dict-rbxts": "1.0.1",
+		"@isentinel/dict-roblox": "1.0.3",
+		"@isentinel/eslint-config": "0.9.0",
+		"@rbxts/compiler-types": "3.0.0-types.0",
+		"@rbxts/types": "1.0.837",
+		"dotenv-cli": "8.0.0",
+		"eslint": "9.20.1",
+		"eslint-plugin-react-roblox-hooks": "5.1.0-rbx.1",
+		"git-pull-run": "1.4.0",
+		"husky": "9.1.7",
+		"jiti": "2.4.2",
+		"lint-staged": "15.4.3",
+		"prettier": "3.5.1",
+		"rbxts-build": "github:AndalYLP/rbxts-build",
+		"rbxts-transform-debug": "github:roblox-aurora/rbxts-transform-debug",
+		"rbxts-transform-env": "3.0.0",
+		"rbxts-transformer-flamework": "1.2.4",
+		"rimraf": "6.0.1",
+		"roblox-ts": "3.0.0",
+		"typescript": "5.7.3"
+	},
+	"packageManager": "pnpm@10.4.1",
+	"pnpm": {
+		"patchedDependencies": {
+			"rbxts-transform-env": "patches/rbxts-transform-env.patch"
+		}
+	},
+	"rbxts-build": {
+		"rbxtscArgs": [
+			"--verbose",
+			"-i",
+			"include"
+		],
+		"placesDir": "places",
+		"names": {
+			"build": "dev:build",
+			"compile": "dev:compile",
+			"open": "dev:open",
+			"watch": "dev:watch"
+		}
+	}
+}
