@@ -2,12 +2,12 @@
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
 		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo",
-		"baseUrl": "./",
+		"baseUrl": "src",
 		"rootDirs": ["src", "test"],
 		"paths": {
-			"common/*": ["src/*"],
-			"test/*": ["test/*"],
-			"types/*": ["src/types/*"]
+			"common/*": ["*"],
+			"test/*": ["../test/*"],
+			"types/*": ["types/*"]
 		},
 		"typeRoots": [
 			"../../node_modules/@rbxts",
@@ -19,7 +19,6 @@
 	},
 	"include": [
 		"src",
-		"test",
-		"../common/**/*"
+		"test"
 	]
 }

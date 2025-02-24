@@ -2,14 +2,14 @@
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
 		"tsBuildInfoFile": "out/tsconfig.tsbuildinfo",
-		"baseUrl": "./",
+		"baseUrl": "src",
 		"rootDirs": ["src", "tests", "../common/src", "../common/test"],
+		"moduleResolution": "node",
 		"paths": {
-			"*": ["src/*"],
-			"common/*": ["../common/src/*"],
-			"types/*": ["../common/src/types/*"],
-			"tests/*": ["tests/*"],
-			"test/*": ["../common/test/*"]
+			"common/*": ["../../common/src/*"],
+			"types/*": ["../../common/src/types/*"],
+			"tests/*": ["../tests/*"],
+			"test/*": ["../../common/test/*"]
 		},
 		"typeRoots": [
 			"../../node_modules/@rbxts",
@@ -24,6 +24,7 @@
 	"include": [
 		"src",
 		"tests",
-		"../common/**/*"
+		"../common/src",
+		"../common/test"
 	]
 }
