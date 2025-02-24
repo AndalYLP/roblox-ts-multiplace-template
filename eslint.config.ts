@@ -50,7 +50,13 @@ export default style(
 		},
 	},
 	{
-		files: ["test/runtime.server.ts"],
+		files: ["**/**.story.**"],
+		rules: {
+			"react/prefer-read-only-props": "off",
+		},
+	},
+	{
+		files: ["places/common/test/runtime.server.ts"],
 		rules: {
 			"import/no-namespace": "off",
 		},
