@@ -15,7 +15,7 @@ export function reactConfig(): void {
 export async function createApp(): Promise<void> {
 	// Avoid implicit React import before setting the __DEV__ flag
 	const React = await import("@rbxts/react");
-	const { App } = await import("common/client/ui/app");
+	const { App } = await import("client/ui/app");
 	const { mount } = await import("common/client/ui/functions/mount");
 
 	mount({ key: "app", children: <App /> });

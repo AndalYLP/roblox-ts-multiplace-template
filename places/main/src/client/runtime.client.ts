@@ -3,7 +3,7 @@ import type Abbreviator from "@rbxts/abbreviate";
 import type { Logger } from "@rbxts/log";
 import Log from "@rbxts/log";
 
-import { createApp, reactConfig } from "common/client/ui/app/config";
+import { createApp, reactConfig } from "client/ui/app/config";
 import { FLAMEWORK_IGNITED } from "common/shared/constants/core";
 import { setupAbbreviator } from "common/shared/functions/abbreviator";
 import { setupLogger } from "common/shared/functions/logger";
