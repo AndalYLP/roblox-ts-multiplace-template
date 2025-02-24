@@ -5,6 +5,7 @@
 		"baseUrl": "src",
 		"rootDirs": ["src", "test"],
 		"paths": {
+			"*": [""],
 			"common/*": ["*"],
 			"test/*": ["../test/*"],
 			"types/*": ["types/*"]
