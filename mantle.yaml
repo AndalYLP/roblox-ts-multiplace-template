@@ -31,7 +31,7 @@ target:
 
     places:
       start:
-        file: place.rbxl
+        file: places/main/place.rbxl
 
         configuration:
           name: Roblox-ts Template
