@@ -1,4 +1,4 @@
-import type { Theme } from "..";
+import type { Theme } from "common/client/ui/themes";
 
 export const defaultTheme: Theme = {
 	colors: {

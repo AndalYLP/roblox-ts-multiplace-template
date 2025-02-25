@@ -7,7 +7,7 @@
 		"paths": {
 			"*": [""],
 			"common/*": ["*"],
-			"test/*": ["../test/*"],
+			"common/test/*": ["../test/*"],
 			"types/*": ["types/*"]
 		},
 		"typeRoots": [

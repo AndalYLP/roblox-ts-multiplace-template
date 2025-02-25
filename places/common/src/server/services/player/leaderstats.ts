@@ -3,12 +3,11 @@ import { Service } from "@flamework/core";
 import type { Logger } from "@rbxts/log";
 import { t } from "@rbxts/t";
 
+import type { OnPlayerJoin, OnPlayerLeave } from "common/server/services/player";
+import type { PlayerEntity } from "common/server/services/player/entity";
 import { store } from "common/server/store";
 import type { PlayerData } from "common/shared/store/slices/player";
 import { selectPlayerData } from "common/shared/store/slices/player";
-
-import type { OnPlayerJoin, OnPlayerLeave } from ".";
-import type { PlayerEntity } from "./entity";
 
 interface LeaderstatValueTypes {
 	IntValue: number;

@@ -8,6 +8,8 @@ import Sift from "@rbxts/sift";
 import Signal from "@rbxts/signal";
 
 import { events } from "common/server/network";
+import type { OnPlayerJoin, PlayerService } from "common/server/services/player";
+import type { PlayerEntity } from "common/server/services/player/entity";
 import { store } from "common/server/store";
 import type { PlayerData } from "common/shared/store/slices/player";
 import { selectPlayerData } from "common/shared/store/slices/player";
@@ -15,9 +17,6 @@ import { selectPlayerMtx } from "common/shared/store/slices/player/mtx/mtx.selec
 import { noYield } from "common/utils/no-yield";
 import type { GamePass, Product } from "types/enum/mtx";
 import { gamePass, product } from "types/enum/mtx";
-
-import type { OnPlayerJoin, PlayerService } from "../player";
-import type { PlayerEntity } from "../player/entity";
 
 const NETWORK_RETRY_ATTEMPTS = 10;
 const NETWORK_RETRY_DELAY = 2;

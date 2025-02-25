@@ -5,14 +5,13 @@ import DataStoreServiceMock from "@rbxts/lapis-mockdatastore";
 import type { Logger } from "@rbxts/log";
 import { Players } from "@rbxts/services";
 
+import { validate } from "common/server/services/player/data/validate";
+import type { PlayerRemovalService } from "common/server/services/player/removal";
 import { store } from "common/server/store";
 import { IS_DEV, IS_STUDIO } from "common/shared/constants/core";
 import type { PlayerData } from "common/shared/store/slices/player";
 import { defaultPlayerData, selectPlayerData } from "common/shared/store/slices/player";
 import { KickCode } from "types/enum/kick-reason";
-
-import type { PlayerRemovalService } from "../removal";
-import { validate } from "./validate";
 
 /**
  * Service for loading and saving player data. This service is responsible for

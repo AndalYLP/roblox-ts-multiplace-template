@@ -2,8 +2,8 @@ import React, { StrictMode } from "@rbxts/react";
 import { ReflexProvider } from "@rbxts/react-reflex";
 
 import { store } from "common/client/store";
-
-import { RemProvider, type RemProviderProps } from "./rem";
+import type { RemProviderProps } from "common/client/ui/providers/rem";
+import { RemProvider } from "common/client/ui/providers/rem";
 
 export interface MountProps extends RemProviderProps {
 	/** The key for the UI component. */

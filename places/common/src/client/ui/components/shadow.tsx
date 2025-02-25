@@ -1,8 +1,8 @@
 import { composeBindings } from "@rbxts/pretty-react-hooks";
 import React from "@rbxts/react";
 
-import { useRem, useTheme } from "../hooks";
-import { ImageLabel } from "./primitive";
+import { ImageLabel } from "common/client/ui/components/primitive";
+import { useRem, useTheme } from "common/client/ui/hooks";
 
 interface ShadowProps extends React.PropsWithChildren {
 	shadowBlur?: number;

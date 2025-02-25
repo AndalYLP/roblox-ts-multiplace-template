@@ -1,8 +1,7 @@
 import React from "@rbxts/react";
 
+import { Group } from "common/client/ui/components/primitive/group";
 import { IS_DEV, IS_EDIT } from "common/shared/constants/core";
-
-import { Group } from "./group";
 
 export interface LayerProps extends React.PropsWithChildren {
 	/** The display order of the layer. */

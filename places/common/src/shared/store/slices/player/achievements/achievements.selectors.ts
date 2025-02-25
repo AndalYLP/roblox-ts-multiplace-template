@@ -1,9 +1,8 @@
 import { createSelector } from "@rbxts/reflex";
 
 import type { SharedState } from "common/shared/store";
-
-import { selectPlayerData } from "../player.selectors";
-import type { AchievementState } from "./achievements.slice";
+import type { AchievementState } from "common/shared/store/slices/player/achievements/achievements.slice";
+import { selectPlayerData } from "common/shared/store/slices/player/player.selectors";
 
 export function selectPlayerAchievements(
 	player: Player,

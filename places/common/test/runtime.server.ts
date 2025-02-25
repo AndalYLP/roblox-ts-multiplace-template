@@ -2,7 +2,7 @@
 
 import type JestModule from "@rbxts/jest";
 
-import type * as ConfigModule from "./jest.config";
+import type * as ConfigModule from "common/test/jest.config";
 
 const ReplicatedStorage = game.GetService("ReplicatedStorage");
 const ServerScriptService = game.GetService("ServerScriptService");

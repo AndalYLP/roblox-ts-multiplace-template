@@ -1,9 +1,9 @@
 import { createProducer } from "@rbxts/reflex";
 
-import type { PlayerData } from "../../player.types";
-import type { PlayerSettings } from "../settings.types";
-import type { PlayerAudioSettings } from "./audio.types";
-import { defaultPlayerAudioSettings } from "./audio.types";
+import type { PlayerData } from "common/shared/store/slices/player/player.types";
+import type { PlayerAudioSettings } from "common/shared/store/slices/player/settings/audio/audio.types";
+import { defaultPlayerAudioSettings } from "common/shared/store/slices/player/settings/audio/audio.types";
+import type { PlayerSettings } from "common/shared/store/slices/player/settings/settings.types";
 
 export type AudioState = Readonly<PlayerAudioSettings>;
 

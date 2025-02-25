@@ -2,8 +2,8 @@
 import { blend, composeBindings } from "@rbxts/pretty-react-hooks";
 import React, { useMemo } from "@rbxts/react";
 
-import { useRem } from "../hooks";
-import { Group } from "./primitive";
+import { Group } from "common/client/ui/components/primitive";
+import { useRem } from "common/client/ui/hooks";
 
 interface OutlineProps extends React.PropsWithChildren {
 	readonly cornerRadius?: React.Binding<UDim> | UDim;

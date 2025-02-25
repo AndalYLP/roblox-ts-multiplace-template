@@ -1,8 +1,7 @@
 import Make from "@rbxts/make";
 
+import { DestroyableComponent } from "common/shared/components/abstract/destroyable";
 import { IS_CLIENT } from "common/shared/constants/core";
-
-import { DestroyableComponent } from "../destroyable";
 
 export type ProximitySettings = Partial<
 	Pick<ProximityPrompt, WritablePropertyNames<ProximityPrompt>>
