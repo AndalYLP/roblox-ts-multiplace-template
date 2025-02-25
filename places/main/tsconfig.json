@@ -9,7 +9,7 @@
 			"common/*": ["../../common/src/*"],
 			"types/*": ["../../common/src/types/*"],
 			"tests/*": ["../tests/*"],
-			"test/*": ["../../common/test/*"]
+			"common/test/*": ["../../common/test/*"]
 		},
 		"typeRoots": [
 			"../../node_modules/@rbxts",
