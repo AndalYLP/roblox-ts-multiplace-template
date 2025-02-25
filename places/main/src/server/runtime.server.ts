@@ -3,7 +3,7 @@ import type Abbreviator from "@rbxts/abbreviate";
 import type { Logger } from "@rbxts/log";
 import Log from "@rbxts/log";
 
-import { middleWares, store } from "common/server/store";
+import { commonStore, middleWares } from "common/server/store";
 import { broadcasterMiddleware } from "common/server/store/middleware/broadcaster";
 import { FLAMEWORK_IGNITED } from "common/shared/constants/core";
 import { setupAbbreviator } from "common/shared/functions/abbreviator";
@@ -14,7 +14,7 @@ async function start(): Promise<void> {
 	const abbreviator = setupAbbreviator();
 
 	Log.Info("Applying store middlewares...");
-	store.applyMiddleware(broadcasterMiddleware(), ...middleWares);
+	commonStore.applyMiddleware(broadcasterMiddleware(), ...middleWares);
 
 	Modding.registerDependency<Logger>(ctor => Log.ForContext(ctor));
 	Modding.registerDependency<Abbreviator>(() => abbreviator);
