@@ -6,8 +6,8 @@ import { balanceSlice } from "common/shared/store/slices/player/balance/balance.
 import { mtxSlice } from "common/shared/store/slices/player/mtx/mtx.slice";
 import { settingsSlices } from "common/shared/store/slices/player/settings";
 
-export * from "./player.selectors";
-export * from "./player.types";
+export * from "common/shared/store/slices/player/player.selectors";
+export * from "common/shared/store/slices/player/player.types";
 
 export const playersSlices = combineProducers({
 	achievements: achievementsSlice,
