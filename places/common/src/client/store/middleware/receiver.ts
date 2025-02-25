@@ -1,7 +1,7 @@
 import type { ProducerMiddleware } from "@rbxts/reflex";
 import { createBroadcastReceiver } from "@rbxts/reflex";
 
-import { events } from "common/client/network";
+import { commonEvents as events } from "common/client/network";
 import { IS_DEV, IS_EDIT } from "common/shared/constants/core";
 import { stateSerDes } from "common/shared/store";
 

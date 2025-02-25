@@ -5,9 +5,9 @@ import { receiverMiddleware } from "common/client/store/middleware/receiver";
 import { slices } from "common/shared/store";
 import { profilerMiddleware } from "common/shared/store/middleware/profiler";
 
-export type RootStore = typeof store;
-export type RootState = InferState<RootStore>;
+export type CommonRootStore = typeof commonStore;
+export type CommonRootState = InferState<CommonRootStore>;
 
-export const store = combineProducers({ ...slices });
+export const commonStore = combineProducers({ ...slices });
 
-store.applyMiddleware(profilerMiddleware, receiverMiddleware());
+commonStore.applyMiddleware(profilerMiddleware, receiverMiddleware());

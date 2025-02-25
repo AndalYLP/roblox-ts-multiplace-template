@@ -6,7 +6,7 @@ import { Inspect } from "@rbxts/rbx-debug";
 import { SoundService, TweenService } from "@rbxts/services";
 
 import { LocalPlayer } from "common/client/constants/player";
-import { store } from "common/client/store";
+import { commonStore as store } from "common/client/store";
 import SoundSystem from "common/shared/modules/3dSound";
 import type { PlayerSettings } from "common/shared/store/slices/player/settings";
 import { selectPlayerSettingsData } from "common/shared/store/slices/player/settings";

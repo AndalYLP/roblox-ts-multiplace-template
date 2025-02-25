@@ -1,7 +1,7 @@
 import React, { StrictMode } from "@rbxts/react";
 import { ReflexProvider } from "@rbxts/react-reflex";
 
-import { store } from "common/client/store";
+import { commonStore as store } from "common/client/store";
 import type { RemProviderProps } from "common/client/ui/providers/rem";
 import { RemProvider } from "common/client/ui/providers/rem";
 

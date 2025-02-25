@@ -1,7 +1,7 @@
 import type { BroadcastAction, ProducerMiddleware } from "@rbxts/reflex";
 import { createBroadcaster } from "@rbxts/reflex";
 
-import { events } from "common/server/network";
+import { commonEvents as events } from "common/server/network";
 import { IS_DEV, IS_EDIT } from "common/shared/constants/core";
 import type { SerializedSharedState, SharedState } from "common/shared/store";
 import { slices, stateSerDes } from "common/shared/store";

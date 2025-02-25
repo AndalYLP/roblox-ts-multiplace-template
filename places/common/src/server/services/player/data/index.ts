@@ -7,7 +7,7 @@ import { Players } from "@rbxts/services";
 
 import { validate } from "common/server/services/player/data/validate";
 import type { PlayerRemovalService } from "common/server/services/player/removal";
-import { store } from "common/server/store";
+import { commonStore as store } from "common/server/store";
 import { IS_DEV, IS_STUDIO } from "common/shared/constants/core";
 import type { PlayerData } from "common/shared/store/slices/player";
 import { defaultPlayerData, selectPlayerData } from "common/shared/store/slices/player";

@@ -7,10 +7,10 @@ import { MarketplaceService, Players } from "@rbxts/services";
 import Sift from "@rbxts/sift";
 import Signal from "@rbxts/signal";
 
-import { events } from "common/server/network";
+import { commonEvents as events } from "common/server/network";
 import type { OnPlayerJoin, PlayerService } from "common/server/services/player";
 import type { PlayerEntity } from "common/server/services/player/entity";
-import { store } from "common/server/store";
+import { commonStore as store } from "common/server/store";
 import type { PlayerData } from "common/shared/store/slices/player";
 import { selectPlayerData } from "common/shared/store/slices/player";
 import { selectPlayerMtx } from "common/shared/store/slices/player/mtx/mtx.selectors";
